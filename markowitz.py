@@ -5,6 +5,8 @@ import scipy.optimize as sco
 
 import matplotlib.pyplot as plt
 
+plt.style.use('fivethirtyeight')
+np.random.seed(777)
 
 TRADING_X_YEAR = {
     'daily': 252,
