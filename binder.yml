@@ -2,12 +2,4 @@ name: markowitz_portfolio
 channels:
   - conda-forge
 dependencies:
-  - numpy
   - psutil
-  - matplotlib
-  - pandas
-  - seaborn
-  - scipy
-  - quandl
-  - yfinance
-  - yahoofinancials
