@@ -9,9 +9,9 @@ plt.style.use('fivethirtyeight')
 np.random.seed(777)
 
 TRADING_X_YEAR = {
-    'daily': 252,
-    'weekly': 52,
-    'monthly': 12,
+    '1d': 252,
+    '1wk': 52,
+    '1mo': 12,
 }
 
 # HACK: super hacky way
@@ -240,6 +240,7 @@ def display_ef_with_selected(table, mean_returns, cov_matrix, risk_free_rate):
     min_vol_allocation.allocation = [round(i*100,2)for i in min_vol_allocation.allocation]
     min_vol_allocation = min_vol_allocation.T
 
+    returns = table.pct_change()
     an_vol = np.std(returns) * np.sqrt(252)
     an_rt = mean_returns * 252
 
