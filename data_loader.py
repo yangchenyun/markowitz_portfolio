@@ -3,7 +3,6 @@ import numpy as np
 
 import quandl
 import yfinance as yf
-from yahoofinancials import YahooFinancials
 
 # Get API key from quandl.com
 quandl.ApiConfig.api_key = 'z-ZRHshTiaYCFv3MpYwY'
