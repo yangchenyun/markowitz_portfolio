@@ -24,11 +24,7 @@ def portfolio_annualised_performance(weights, mean_returns, cov_matrix):
 
 
 class PorfolioModel:
-    def __init__(self, df, interval='weekly'):
-        table = df.pivot(columns='ticker')
-        # By specifying col[1] in below list comprehension
-        # You can select the stock names under multi-level column
-        table.columns = [col[1] for col in table.columns]
+    def __init__(self, table, interval='weekly'):
         self.table = table
 
         global TRADING_F
