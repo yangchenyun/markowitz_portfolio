@@ -119,7 +119,7 @@ def display_simulated_ef_with_random(table, mean_returns, cov_matrix, num_portfo
     plt.colorbar()
     plt.scatter(sdp,rp,marker='*',color='r',s=500, label='Maximum Sharpe ratio')
     plt.scatter(sdp_min,rp_min,marker='*',color='g',s=500, label='Minimum volatility')
-    plt.title('Simulated Portfolio Optimization based on Efficient Frontier')
+    plt.title('Simulated Portfolio Optimization based on Random calculation')
     plt.xlabel('annualised volatility')
     plt.ylabel('annualised returns')
     plt.legend(labelspacing=0.8)
@@ -143,8 +143,6 @@ def display_simulated_ef_with_random(table, mean_returns, cov_matrix, num_portfo
     ax.scatter(sdp_min,rp_min,marker='*',color='g',s=500, label='Minimum volatility')
 
     target = np.linspace(rp_min, 0.34, 50)
-    efficient_portfolios = efficient_frontier(mean_returns, cov_matrix, target)
-    ax.plot([p['fun'] for p in efficient_portfolios], target, linestyle='-.', color='black', label='efficient frontier')
     ax.set_title('Portfolio Optimization with Individual Stocks')
     ax.set_xlabel('annualised volatility')
     ax.set_ylabel('annualised returns')
